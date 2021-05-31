@@ -15,8 +15,8 @@ namespace MSRDirOps
     [ComVisible(true)]
     public interface IDirOps
     {
-        double getFileSize(string filePath);
-        double getDirectorySize(string filePath);
+        long getFileSize(string filePath);
+        long getDirectorySize(string filePath);
     }
 
     [Guid("FF06507E-6A0D-482F-96D8-3A4A696248E3")]
@@ -32,20 +32,18 @@ namespace MSRDirOps
             fso = new Scripting.FileSystemObject();
         }
 
-        public double getFileSize(string filePath)
+        public long getFileSize(string filePath)
         {
             Scripting.File file = fso.GetFile(filePath);
             Int64 fileSize = (Int64)file.Size;
-            double dFileSize = BitConverter.Int64BitsToDouble(fileSize);
-            return dFileSize;
+            return fileSize;
         }
 
-        public double getDirectorySize(string filePath)
+        public long getDirectorySize(string filePath)
         {
             Scripting.Folder folder = fso.GetFolder(filePath);
             Int64 folderSize = (Int64)folder.Size;
-            double dFolderSize = BitConverter.Int64BitsToDouble(folderSize);
-            return dFolderSize;
+            return folderSize;
         }
     }
 }

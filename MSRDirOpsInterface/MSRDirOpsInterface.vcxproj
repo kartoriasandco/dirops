@@ -125,7 +125,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\aajam\source\repos\MSRDirOps\bin\x64\Debug;C:\Program Files\Java\jdk-16.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\Java\jdk-11.0.1\include\win32;C:\Program Files\Java\jdk-11.0.1\include;C:\Users\aajam\source\repos\MSRDirOps\bin\x64\Debug;C:\Program Files\Java\jdk-16.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

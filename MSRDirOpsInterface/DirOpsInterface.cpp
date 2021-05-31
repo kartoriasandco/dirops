@@ -21,7 +21,7 @@ private:
         mi_.CreateInstance(CLSID_DirOps);
     }
 public:
-    const DirOpsInterface* instanse() {
+    const static DirOpsInterface* instance() {
         if (!_co_init) {
             ::CoInitialize(NULL);
             _co_init = true;
@@ -49,4 +49,20 @@ private:
     IDirOpsPtr mi_;
     static bool _co_init;
 };
+
+bool DirOpsInterface::_co_init = false;
+
+extern "C" {
+    JNIEXPORT jlong JNICALL Java_dirops_DirectoryOperator_getFileSize(JNIEnv* env, jobject thisObj, jstring filePath) {
+        const char* cstr = env->GetStringUTFChars(filePath, NULL);
+        std::string bstrFilePath = std::string(cstr);
+        return DirOpsInterface::instance()->getFileSize((BSTR)filePath);
+    }
+
+    JNIEXPORT jlong JNICALL Java_dirops_DirectoryOperator_getDirectorySize(JNIEnv* env, jobject thisObj, jstring filePath) {
+        const char* cstr = env->GetStringUTFChars(filePath, NULL);
+        std::string bstrFilePath = std::string(cstr);
+        return DirOpsInterface::instance()->getDirectorySize((BSTR)filePath);
+    }
+}
 
