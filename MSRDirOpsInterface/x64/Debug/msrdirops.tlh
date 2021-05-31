@@ -1,0 +1,68 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.29.30037.0 (7041910c).
+//
+// C:\Users\aajam\source\repos\MSRDirOpsInterface\x64\Debug\msrdirops.tlh
+//
+// C++ source equivalent of type library MSRDirOps.tlb
+// compiler-generated file created 05/27/21 at 17:36:32 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace MSRDirOps {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("33c2289b-7625-3334-b5cb-5b805c3dee8a"))
+/* LIBID */ __MSRDirOps;
+struct __declspec(uuid("34b32470-4c35-4a0a-b42b-931a2d6180e5"))
+/* dual interface */ IDirOps;
+struct /* coclass */ DirOps;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IDirOps, __uuidof(IDirOps));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("34b32470-4c35-4a0a-b42b-931a2d6180e5"))
+IDirOps : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall getFileSize (
+        /*[in]*/ BSTR filePath,
+        /*[out,retval]*/ double * pRetVal ) = 0;
+      virtual HRESULT __stdcall getDirectorySize (
+        /*[in]*/ BSTR filePath,
+        /*[out,retval]*/ double * pRetVal ) = 0;
+};
+
+struct __declspec(uuid("ff06507e-6a0d-482f-96d8-3a4a696248e3"))
+DirOps;
+    // [ default ] interface _Object
+    // [ default, source ] interface IDirOps
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_MSRDirOps =
+    {0x33c2289b,0x7625,0x3334,{0xb5,0xcb,0x5b,0x80,0x5c,0x3d,0xee,0x8a}};
+extern "C" const GUID __declspec(selectany) IID_IDirOps =
+    {0x34b32470,0x4c35,0x4a0a,{0xb4,0x2b,0x93,0x1a,0x2d,0x61,0x80,0xe5}};
+extern "C" const GUID __declspec(selectany) CLSID_DirOps =
+    {0xff06507e,0x6a0d,0x482f,{0x96,0xd8,0x3a,0x4a,0x69,0x62,0x48,0xe3}};
+
+} // namespace MSRDirOps
+
+#pragma pack(pop)

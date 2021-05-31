@@ -1,0 +1,7 @@
+C:\Users\aajam\source\repos\MSRDirOps\bin\x64\Debug\MSRDirOps.dll
+C:\Users\aajam\source\repos\MSRDirOps\bin\x64\Debug\MSRDirOps.pdb
+C:\Users\aajam\source\repos\MSRDirOps\obj\x64\Debug\Interop.Scripting.dll
+C:\Users\aajam\source\repos\MSRDirOps\obj\x64\Debug\MSRDirOps.csproj.ResolveComReference.cache
+C:\Users\aajam\source\repos\MSRDirOps\obj\x64\Debug\MSRDirOps.csproj.CoreCompileInputs.cache
+C:\Users\aajam\source\repos\MSRDirOps\obj\x64\Debug\MSRDirOps.dll
+C:\Users\aajam\source\repos\MSRDirOps\obj\x64\Debug\MSRDirOps.pdb
