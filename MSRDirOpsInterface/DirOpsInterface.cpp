@@ -3,10 +3,12 @@
 #include <Windows.h>
 #include <objbase.h>
 #include <string>
+#include <locale>
+#include <codecvt>
 
 #include <jni.h>
 
-#import "MSRDirOps.tlb" named_guids raw_interfaces_only
+#import "C:\dev\dirops\MSRDirOps\bin\x64\Debug\msrdirops.tlb" named_guids raw_interfaces_only
 
 using namespace MSRDirOps;
 
@@ -29,15 +31,22 @@ public:
         static DirOpsInterface _ret;
         return &_ret;
     }
-    double getFileSize(BSTR filePath) const {
-        double ret;
-        mi_->getFileSize(filePath, &ret);
+
+    __int64 getFileSize(std::string filePath) const {
+        __int64 ret;
+        char* charArray;
+        std::string str_obj(filePath);
+        charArray = &str_obj[0];
+        mi_->getFileSize(charArray, &ret);
         return ret;
     }
 
-    double getDirectorySize(BSTR filePath) const {
-        double ret;
-        mi_->getDirectorySize(filePath, &ret);
+    __int64 getDirectorySize(std::string filePath) const {
+        __int64 ret;
+        char* charArray;
+        std::string str_obj(filePath);
+        charArray = &str_obj[0];
+        mi_->getDirectorySize(charArray, &ret);
         return ret;
     }
 
@@ -53,16 +62,17 @@ private:
 bool DirOpsInterface::_co_init = false;
 
 extern "C" {
-    JNIEXPORT jlong JNICALL Java_dirops_DirectoryOperator_getFileSize(JNIEnv* env, jobject thisObj, jstring filePath) {
+
+    JNIEXPORT jlong JNICALL Java_dirops_DirectoryOperator_vbrGetFileSize(JNIEnv* env, jobject thisObj, jstring filePath) {
         const char* cstr = env->GetStringUTFChars(filePath, NULL);
         std::string bstrFilePath = std::string(cstr);
-        return DirOpsInterface::instance()->getFileSize((BSTR)filePath);
+        return DirOpsInterface::instance()->getFileSize(bstrFilePath);
     }
 
-    JNIEXPORT jlong JNICALL Java_dirops_DirectoryOperator_getDirectorySize(JNIEnv* env, jobject thisObj, jstring filePath) {
+    JNIEXPORT jlong JNICALL Java_dirops_DirectoryOperator_vbrGetDirectorySize(JNIEnv* env, jobject thisObj, jstring filePath) {
         const char* cstr = env->GetStringUTFChars(filePath, NULL);
         std::string bstrFilePath = std::string(cstr);
-        return DirOpsInterface::instance()->getDirectorySize((BSTR)filePath);
+        return DirOpsInterface::instance()->getDirectorySize(bstrFilePath);
     }
 }
 

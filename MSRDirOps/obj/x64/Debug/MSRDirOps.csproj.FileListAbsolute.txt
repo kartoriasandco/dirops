@@ -5,3 +5,10 @@ C:\Users\aajam\source\repos\MSRDirOps\obj\x64\Debug\MSRDirOps.csproj.ResolveComR
 C:\Users\aajam\source\repos\MSRDirOps\obj\x64\Debug\MSRDirOps.csproj.CoreCompileInputs.cache
 C:\Users\aajam\source\repos\MSRDirOps\obj\x64\Debug\MSRDirOps.dll
 C:\Users\aajam\source\repos\MSRDirOps\obj\x64\Debug\MSRDirOps.pdb
+C:\dev\dirops\MSRDirOps\bin\x64\Debug\MSRDirOps.dll
+C:\dev\dirops\MSRDirOps\bin\x64\Debug\MSRDirOps.pdb
+C:\dev\dirops\MSRDirOps\obj\x64\Debug\Interop.Scripting.dll
+C:\dev\dirops\MSRDirOps\obj\x64\Debug\MSRDirOps.csproj.ResolveComReference.cache
+C:\dev\dirops\MSRDirOps\obj\x64\Debug\MSRDirOps.csproj.CoreCompileInputs.cache
+C:\dev\dirops\MSRDirOps\obj\x64\Debug\MSRDirOps.dll
+C:\dev\dirops\MSRDirOps\obj\x64\Debug\MSRDirOps.pdb

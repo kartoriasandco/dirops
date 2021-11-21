@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\aajam\source\repos\MSRDirOps\x64\Debug\MSRDirOpsInterface.dll</FullPath>
+      <FullPath>C:\dev\dirops\MSRDirOps\x64\Debug\MSRDirOpsInterface.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

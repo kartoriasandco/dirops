@@ -1,9 +1,9 @@
-﻿// Created by Microsoft (R) C/C++ Compiler Version 14.29.30037.0 (7041910c).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.28.29914.0 (8026c5cc).
 //
-// C:\Users\aajam\source\repos\MSRDirOpsInterface\x64\Debug\msrdirops.tlh
+// C:\dev\dirops\MSRDirOpsInterface\x64\Debug\msrdirops.tlh
 //
-// C++ source equivalent of type library MSRDirOps.tlb
-// compiler-generated file created 05/27/21 at 17:36:32 - DO NOT EDIT!
+// C++ source equivalent of type library C:\dev\dirops\MSRDirOps\bin\x64\Debug\msrdirops.tlb
+// compiler-generated file created 11/20/21 at 18:08:53 - DO NOT EDIT!
 
 #pragma once
 #pragma pack(push, 8)
@@ -40,16 +40,17 @@ IDirOps : IDispatch
     //
 
       virtual HRESULT __stdcall getFileSize (
-        /*[in]*/ BSTR filePath,
-        /*[out,retval]*/ double * pRetVal ) = 0;
+        /*[in,out]*/ LPSTR filePath,
+        /*[out,retval]*/ __int64 * pRetVal ) = 0;
       virtual HRESULT __stdcall getDirectorySize (
-        /*[in]*/ BSTR filePath,
-        /*[out,retval]*/ double * pRetVal ) = 0;
+        /*[in,out]*/ LPSTR filePath,
+        /*[out,retval]*/ __int64 * pRetVal ) = 0;
 };
 
 struct __declspec(uuid("ff06507e-6a0d-482f-96d8-3a4a696248e3"))
 DirOps;
-    // [ default ] interface _Object
+    // interface _Object
+    // [ default ] interface IDirOps
     // [ default, source ] interface IDirOps
 
 //

@@ -1,2 +1,6 @@
-﻿  DirOpsInterface.cpp
-  MSRDirOpsInterface.vcxproj -> C:\Users\aajam\source\repos\MSRDirOps\x64\Debug\MSRDirOpsInterface.dll
+﻿  pch.cpp
+  DirOpsInterface.cpp
+  dllmain.cpp
+  Generating Code...
+     Creating library C:\dev\dirops\MSRDirOps\x64\Debug\MSRDirOpsInterface.lib and object C:\dev\dirops\MSRDirOps\x64\Debug\MSRDirOpsInterface.exp
+  MSRDirOpsInterface.vcxproj -> C:\dev\dirops\MSRDirOps\x64\Debug\MSRDirOpsInterface.dll
